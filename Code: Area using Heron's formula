@@ -1,0 +1,14 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+	float a,b,c;
+	scanf("%f%f%f",&a,&b,&c);
+	float s;
+	s=(a+b+c)/2;
+	printf("Semi perimeter:%f",s);
+	
+	float area;
+	area = sqrt(s*(s-a)*(s-b)*(s-c));
+	printf("\nArea:%f",area);
+}
