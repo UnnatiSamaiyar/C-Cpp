@@ -1,0 +1,26 @@
+/*Write a program to find the largest of three numbers using nested if else.*/
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	int a,b,c;
+	printf("The three numbers are:\n");
+	scanf("%d%d%d",&a,&b,&c);
+	printf("Largest Number:");
+	if(a>b){
+		if(a>c){
+			printf("%d",a);
+		}
+		else{
+			printf("%d",c);
+		}
+	}
+	else{
+		if(b>c){
+			printf("%d",b);
+		}
+		else{
+			printf("%d",c);
+		}
+	}
+}
