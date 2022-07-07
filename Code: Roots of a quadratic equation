@@ -1,0 +1,39 @@
+/*Write a program to determine the roots of quadratic equation.*/
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+	signed a,b,c;
+	cin>>a>>b>>c;
+	cout<<"Coefficients of quadratic equation:"<<endl;
+	
+	if(a==0){
+		cout<<"Equation is not quadratic."<<endl;
+	}
+	
+	float root1, root2, D, real_part, imaginary_part;
+	D=sqrt(b*b-4*a*c);
+	cout<<"Discriminant is:"<<D<<endl;
+	real_part=(-b)/(2*a);
+	imaginary_part=D;
+	
+	root1=(-b+D)/(2*a);
+	root2=(-b-D)/(2*a);
+	
+	if(D>0){
+		cout<<"Roots are real and distinct."<<endl;
+		cout<<"Root1:"<<root1<<endl;
+		cout<<"Root2:"<<root2<<endl;
+	}
+	else if(D==0){
+		cout<<"Roots are real and equal."<<endl;
+		cout<<"Root1:"<<root1<<endl;
+		cout<<"Root2:"<<root2<<endl;
+	}
+	else{
+		cout<<"Roots are imaginary."<<endl;
+		cout<<"Real part:"<<real_part<<endl;
+		cout<<"Imaginary Part:"<<imaginary_part<<endl;
+	}
+}
