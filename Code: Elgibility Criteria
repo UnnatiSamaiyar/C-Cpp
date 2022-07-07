@@ -1,0 +1,31 @@
+/*Write a program to receive marks of physics, chemistry & maths from user 
+& check its eligibility for course if 
+a) Marks of physics > 40 
+b) Marks of chemistry > 50 
+c) Marks of math’s > 60 
+d) Total of physics & math’s marks > 150 
+e) Total of three subjects marks > 200.*/
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+	float physics;
+	float chemistry;
+	float maths;
+	cin>>physics>>chemistry>>maths;
+	cout<<"Marks obtained in physics, chemistry and maths:"<<endl;
+	cout<<physics<<" "<<chemistry<<" "<<maths<<endl;
+	float sum = physics + maths;
+	float total = physics + chemistry + maths;
+	cout<<"Sum of marks of physics and maths:"<<sum<<endl;
+	cout<<"Total marks obtained in all subjects:"<<total<<endl;
+	
+	if(physics>40 && chemistry>50 && maths>60 && sum>150 && total>200){
+		cout<<"Eligible."<<endl;
+	}
+	else{
+		cout<<"Not Eligible."<<endl;
+	}
+	
+}
