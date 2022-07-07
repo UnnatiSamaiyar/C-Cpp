@@ -1,0 +1,19 @@
+/*Write a program to construct a Fibonacci series upto n terms.*/
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+	int first_term=0, second_term=1, n, next_term;
+	cin>>n;
+	
+	cout<<"Fibonacci Series:"<<endl;
+	cout<<first_term<<" ";
+	cout<<second_term<<" ";
+	for(int i=2; i<=n; i++){
+		next_term = second_term + first_term;
+		cout<<next_term<<" ";
+		first_term = second_term;
+		second_term = next_term;
+	}
+}
